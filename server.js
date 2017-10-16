@@ -21,7 +21,7 @@ app.use(bodyParser.json());
 
 app.set('port', (process.env.PORT || 5000));
 
-moongooseDrv.connect("mongodb://mscosmosmongo:7OCD9owW22bLzq2V1rbQ8xkhUEYu3hfTlJY3ix6EuMuLKDdcGbvgxH0ZICikQdlykT1f6s9zRp105hMNGBV7qw==@mscosmosmongo.documents.azure.com:10255/?ssl=true&replicaSet=globaldb");
+moongooseDrv.connect("mongodb://mscosmosmongo:7OCD9owW22bLzq2V1rbQ8xkhUEYu3hfTlJY3ix6EuMuLKDdcGbvgxH0ZICikQdlykT1f6s9zRp105hMNGBV7qw==@mscosmosmongo.documents.azure.com:10255/?ssl=true&replicaSet=globaldb&sslverifycertificate=false");
 var db = moongooseDrv.connection;
 var employeeSchema = moongooseDrv.Schema({EmpNo: String, EmpName: String, Salary: String, DeptName: String, Designation: String});
 var employeeModel = moongooseDrv.model("EmployeeCollection",employeeSchema,"EmployeeCollection"); 
